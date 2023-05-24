@@ -52,5 +52,5 @@ def create_epub(original_data_path, epub_path, epub_title):
 
 
 if __name__ == '__main__':
-    create_epub("../json/tpo-30-35.json", "../epub/TOEFL TPO 30~35.epub",
+    create_epub("../data/json/tpo-30-35.json", "../data/epub/TOEFL TPO 30~35.epub",
                 "TOEFL TPO 30~35")
