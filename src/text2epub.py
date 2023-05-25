@@ -34,12 +34,11 @@ def create_epub(original_data_path, epub_path, epub_title):
         chapter = epub.EpubHtml(title=item['id'],
                                 file_name=item['id'] + '.xhtml',
                                 lang="en")
-        chapter.content = '<h1>' + item['title'] + '</h1>' + '<br>'.join(
-            item['article'])
+        chapter.content = '<h1>' + item['title'] + '</h1>' + "<p>" + '<br>'.join(item['article']) + "</p>"
         book.add_item(chapter)
         chapterList.append(chapter)
 
-    #添加目录
+    # 添加目录
     book.toc = chapterList
     book.spine = chapterList
     book.add_item(epub.EpubNcx())
